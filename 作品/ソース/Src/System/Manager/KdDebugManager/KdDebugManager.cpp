@@ -139,6 +139,16 @@ void KdDebug::PlayerDebugDraw()
 
 		ImGui::Text(u8"PlayerSpd :%.3f", spPlayer->GetPlayerMoveSpd());
 		ImGui::Text(u8"OutLineValue :%.3f", spPlayer->GetOutLineValue());
+
+		if (spPlayer->GetQtePointFlg())
+		{
+			ImGui::Text(u8"QtePointFlg true");
+		}
+		else
+		{
+			ImGui::Text(u8"QtePointFlg false");
+		}
+		
 	}
 	ImGui::End();
 }

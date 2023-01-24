@@ -8,6 +8,8 @@ public:
 	SwordEffect();
 	~SwordEffect()override {}
 
+	void DrawNoLighting() override;
+
 	void Update(Math::Vector3& startPos, Math::Vector3& endPos, Math::Matrix& mat);
 	void SetMatrix();
 

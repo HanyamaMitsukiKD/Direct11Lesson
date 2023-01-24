@@ -1,6 +1,6 @@
 #include "ParticleBase.h"
 
-void ParticleBase::DrawNoLighting()
+void ParticleBase::DrawBright()
 {
 	if (m_lifespan > 0)
 	{
@@ -83,3 +83,4 @@ void ParticleBase::Billboard(Math::Matrix& mat)
 
 	mat = Math::Matrix::Matrix(gaisekiX, gaisekiY, targetDir);
 }
+

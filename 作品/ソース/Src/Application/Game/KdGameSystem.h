@@ -16,6 +16,7 @@ public:
 	void Update();
 	void PreDraw();	
 	void Draw();
+	void EffectDraw();
 	
 	void RequestChangeScene(std::string_view nextSceneName, bool flg);
 	
@@ -85,4 +86,8 @@ private:
 	KdTexture m_postRTTex;		//レンダーターゲット
 	KdTexture m_postDSTex;		//デプスステンシル（深度）
 	D3D11_VIEWPORT m_postVP;	//ビューポート用
+
+	KdTexture m_brightRTTex;		//レンダーターゲット
+	KdTexture m_brightDSTex;		//デプスステンシル（深度）
+	D3D11_VIEWPORT m_brightVP;	//ビューポート用
 };

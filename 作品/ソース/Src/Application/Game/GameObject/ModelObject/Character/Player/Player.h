@@ -24,19 +24,20 @@ public:
 	eClassID GetClassID() const override { return ePlayer; }
 
 	void Set2DAsset(std::shared_ptr<KdTexture>& sp_Tex, std::string_view fileName);
-	
-	void GetCamera(const std::shared_ptr<TPSCamera>& sp){m_wpCamera = sp;}
-	
+
+	void GetCamera(const std::shared_ptr<TPSCamera>& sp) { m_wpCamera = sp; }
+
 	//HP関係
 	void SetPlayerDamageFlg(bool flg);
 	const int	GetPlayerHP()	const { return m_playerHP; }
 	const int	GetHPDecreaseValue()		const { return m_playerHPDecreaseValue; }
 	const bool	GetDamageFlg()	const { return m_playerDamageFlg; }
-	
+
 	//ジャスト回避、QTE関係
 	void QTECheck();
 	const bool	GetQtePointFlg()const { return m_qtePointFlg; }
-	
+	void SetQtePointFlg(bool flg) { m_qtePointFlg = flg; }
+
 
 	// カウンター関係
 	const int GetCounterCount()const { return m_CounterCount; }
@@ -46,9 +47,9 @@ public:
 
 	// Playerのステータス
 	const bool GetMoveFlg() const { return m_moveFlg; }
-	void SetTrueMoveFlg()  {  m_moveFlg=true; }
+	void SetTrueMoveFlg() { m_moveFlg = true; }
 	const bool GetAttackMotionFlg() const { return m_attackMotionFlg; }
-	
+
 	const float GetPlayerMoveSpd()const { return playerMove; }
 
 	//プレイヤーの武器関係
@@ -62,7 +63,7 @@ public:
 	void UpdateUltAttackEffect();
 	void UltInit();
 
-	
+
 	void JustRightCheck();
 
 	enum ePlayerAttackAnimation
@@ -73,10 +74,10 @@ public:
 		eAnimationAttack3
 	};
 
-	void SetPlayerAttackAnimation(std::string_view fileName,const bool loopFlg);
+	void SetPlayerAttackAnimation(std::string_view fileName, const bool loopFlg);
 
 	ePlayerAttackAnimation GetAttackAnimationState() { return m_paAtaackState; }
-	void SetAttackAnimationState(const ePlayerAttackAnimation state) {  m_paAtaackState= state; }
+	void SetAttackAnimationState(const ePlayerAttackAnimation state) { m_paAtaackState = state; }
 	const bool GetAnimotionContinueFlg() const { return m_attackAnimotionContinueFlg; }
 
 	const float GetOutLineValue()const { return m_outLineValue; }
@@ -106,28 +107,28 @@ public:
 
 	//当たり判定判定とそれに伴う座標の更新
 	void UpdateGroundCollision();
-	void UpdateEnemyFutureCircleCollision(Math::Vector3& dstMove, Math::Vector3& nowPos,Math::Vector3& moveVec);
+	void UpdateEnemyFutureCircleCollision(Math::Vector3& dstMove, Math::Vector3& nowPos, Math::Vector3& moveVec);
 	void UpdateCircleCollision();
 	void UpdateCollision();
 
 private:
 	std::weak_ptr<CameraBase>		m_wpCamera;
 	std::shared_ptr<Sword>			m_spSword;
-	
+
 	// カウンターカウント
 	int m_CounterCount = 0;
 	bool m_CounterCountFlg = false;
-	
+
 	// エフェクト関係
 	int m_ultCount = 0;
 	int m_ultZpos = 4;
-	
+
 	bool ultOption1Flg = false;
 	bool ultOption2Flg = false;
 	bool ultOption3Flg = false;
 
 	//縁取り
-	float m_outLineValue = 0;	
+	float m_outLineValue = 0;
 
 	// キャラクターの移動速度
 	float	m_playerMoveSpd = 0.2f;
@@ -139,14 +140,11 @@ private:
 	int		m_playerHPDecreaseValue = 0;	//受けたダメージ量
 	bool	m_playerDamageFlg = false;		//エネルギー消費フラグ
 
-	// ジャストカウンター
-	bool justCounterFlg = false;
-
 	// ダメージ関係
 	Math::Vector3	m_damageDir;			//ぶっ飛ばされる方向
-	
+
 	Math::Vector3	m_AvoidanceDir;			//回避方向
-	
+
 	// enumで管理したほうがいいかもしれない変数
 	bool JustAvoidanceUpdateFlg = false;	//ジャスト回避フラグ
 
@@ -173,6 +171,6 @@ private:
 
 	ePlayerAttackAnimation m_paAtaackState = eNoAnimationAttack;
 
-	
+
 	std::shared_ptr<StateBase> m_nowActionState;
 };

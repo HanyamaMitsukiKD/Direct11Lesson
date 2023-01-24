@@ -14,7 +14,7 @@ void CounterState::Update()
 
 	KdThrowManager::GetInstance().Init();
 
-	if (m_count > 300)
+	if (m_count > 420)
 	{
 		m_count = 0;
 		counterFlg = false;
@@ -25,5 +25,6 @@ void CounterState::Update()
 		spNormalEnemy->CreateUltDamageEffect();
 		spNormalEnemy->SetObjectSpeed(0.2f);
 		spPlayer->SetObjectSpeed(1.5f);
+		spPlayer->SetQtePointFlg(false);
 	}
 }

@@ -43,7 +43,7 @@ void UltParticle::SetMatrix(const float size, const Math::Vector3& pos, const Ma
 	m_speed = 1.0f / (60.0f * 2);
 }
 
-void UltParticle::DrawNoLighting()
+void UltParticle::DrawBright()
 {
 	if (!m_spPoly) { return; }
 

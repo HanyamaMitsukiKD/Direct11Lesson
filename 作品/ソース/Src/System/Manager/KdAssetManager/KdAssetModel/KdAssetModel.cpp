@@ -3,6 +3,7 @@
 void KdAssetModel::Init()
 {
 	// ステージ
+	SetModelDate(m_spModel_Sky, "Asset/Model/Sky/sky.gltf");
 	SetModelDate(m_spModel_Stage, "Asset/Model/Stage/stage3.gltf");
 	SetModelDate(m_spModel_StageGround, "Asset/Model/Stage/stage_Ground.gltf");
 	SetModelDate(m_spModel_Player, "Asset/Model/Player/robot.gltf");
@@ -27,6 +28,11 @@ void KdAssetModel::SetModelDate(std::shared_ptr<KdModelWork>& modelDate, std::st
 const std::shared_ptr<KdModelWork>& KdAssetModel::GetModel_Stage() const
 {
 	return m_spModel_Stage;
+}
+
+const std::shared_ptr<KdModelWork>& KdAssetModel::GetModel_Sky() const
+{
+	return m_spModel_Sky;
 }
 
 const std::shared_ptr<KdModelWork>& KdAssetModel::GetModel_StageGround() const

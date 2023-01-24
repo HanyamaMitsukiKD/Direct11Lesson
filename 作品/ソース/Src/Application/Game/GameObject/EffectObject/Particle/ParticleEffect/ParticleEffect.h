@@ -10,6 +10,7 @@ public:
 
 	void Update()override;
 	void SetMatrix(const float size, const Math::Vector3& pos, const Math::Vector3& dir);
+	void DrawBright() override;
 
 	float EaseOutCirc(float progress)
 	{

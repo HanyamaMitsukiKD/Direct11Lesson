@@ -20,6 +20,7 @@ public:
 	// BGM
 	void PlayTitleBGM();
 	void PlayGameBGM();
+	void PlayGameBGM2();
 	
 	// SE
 	void BomSE();			//”š”­‰¹

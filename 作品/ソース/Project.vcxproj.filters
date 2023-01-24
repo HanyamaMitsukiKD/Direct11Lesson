@@ -211,6 +211,9 @@
     <Filter Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\JustAttack">
       <UniqueIdentifier>{0a591f4e-3581-4658-a0bf-f6fb5adf5051}</UniqueIdentifier>
     </Filter>
+    <Filter Include="Src\System\Shader">
+      <UniqueIdentifier>{12398715-bae2-4908-893c-ec6a8d6ff729}</UniqueIdentifier>
+    </Filter>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="src\Pch.h">
@@ -474,6 +477,9 @@
     <ClInclude Include="Src\System\Easing.h">
       <Filter>Src\System</Filter>
     </ClInclude>
+    <ClInclude Include="Src\System\Shader\KdPostProcessShader.h">
+      <Filter>Src\System\Shader</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="src\Pch.cpp">
@@ -707,6 +713,9 @@
     <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\JustAttack\PlayerJustAttack.cpp">
       <Filter>Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\JustAttack</Filter>
     </ClCompile>
+    <ClCompile Include="Src\System\Shader\KdPostProcessShader.cpp">
+      <Filter>Src\System\Shader</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <None Include="Src\Framework\Shader\inc_KdCommon.hlsli">
@@ -720,6 +729,9 @@
     </None>
     <None Include="Src\Framework\Shader\StandardShader\inc_KdStandardShader.hlsli">
       <Filter>Src\Framework\Shader\StandardShader</Filter>
+    </None>
+    <None Include="Src\System\Shader\KdPostProcessShader.hlsli">
+      <Filter>Src\System\Shader</Filter>
     </None>
   </ItemGroup>
   <ItemGroup>
@@ -749,6 +761,15 @@
     </FxCompile>
     <FxCompile Include="Src\Framework\Shader\StandardShader\KdStandardShader_Outline_VS.hlsl">
       <Filter>Src\Framework\Shader\StandardShader</Filter>
+    </FxCompile>
+    <FxCompile Include="Src\System\Shader\KdPostProcessShader_PS.hlsl">
+      <Filter>Src\System\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="Src\System\Shader\KdPostProcessShader_PS_Blur.hlsl">
+      <Filter>Src\System\Shader</Filter>
+    </FxCompile>
+    <FxCompile Include="Src\System\Shader\KdPostProcessShader_VS.hlsl">
+      <Filter>Src\System\Shader</Filter>
     </FxCompile>
   </ItemGroup>
 </Project>

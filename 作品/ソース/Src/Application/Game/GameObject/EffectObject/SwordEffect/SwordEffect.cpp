@@ -6,6 +6,11 @@ SwordEffect::SwordEffect()
 	m_speed = 0.5f;
 }
 
+void SwordEffect::DrawNoLighting()
+{
+	DrawEffect();
+}
+
 void SwordEffect::Update(Math::Vector3& startPos, Math::Vector3& endPos,Math::Matrix& mat)
 {
 	// ÇQïbåoÇ¡ÇΩÇÁè¡Ç∑

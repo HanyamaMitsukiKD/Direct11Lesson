@@ -10,6 +10,7 @@ void KdShaderManager::Init()
 	m_standardShader.Init();
 	m_effectShader.Init();
 	m_spriteShader.Init();
+	m_postProcessShader.Init();
 
 	//============================================
 	// 定数バッファ
@@ -309,6 +310,7 @@ void KdShaderManager::Release()
 	m_standardShader.Release();
 	m_effectShader.Release();
 	m_spriteShader.Release();
+	m_postProcessShader.Release();
 
 	m_cb7_Camera.Release();
 	m_cb8_Light.Release();

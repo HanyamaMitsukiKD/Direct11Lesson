@@ -162,7 +162,7 @@ void Player::Update()
 			m_nowActionState->Update(*this);
 		}
 
-		
+
 		UpdateCircleCollision();		//円判定
 
 		UpdateCollision();				// 押し返し処理
@@ -170,7 +170,7 @@ void Player::Update()
 
 	//当たり判定
 	UpdateGroundCollision();		//地面判定
-	
+
 	//アニメーションの時間を進める
 	m_animator.AdvanceTime(m_spModel->WorkNodes(), m_Objectspeed);
 	m_spModel->CalcNodeMatrices();
@@ -526,6 +526,11 @@ void Player::UpdateMove(Math::Vector3& dstMove, Math::Vector3& nowPos)
 
 	moveVec *= (m_playerMoveSpd * playerMove);
 
+	if (GetAsyncKeyState(VK_SHIFT))
+	{
+		moveVec *= 1.1f;
+	}
+
 
 	std::shared_ptr<CameraBase> spCamera = m_wpCamera.lock();
 	if (spCamera)
@@ -541,8 +546,10 @@ void Player::UpdateDamageMove(Math::Vector3& dstMove, Math::Vector3& nowPos)
 {
 	Math::Vector3 moveVec = m_damageDir;					//後ろに飛ぶ
 
+	float backSpd = 0.5f;
+
 	moveVec.Normalize();
-	moveVec *= m_playerMoveSpd;
+	moveVec *= backSpd;
 
 	nowPos.x += moveVec.x;										//現在位置から動いてもらう
 	nowPos.z += moveVec.z;
@@ -573,7 +580,7 @@ void Player::UpdateJustAvoidance(Math::Vector3& dstMove, Math::Vector3& nowPos)
 
 	rotation = 20.0f;
 	moveVec = m_AvoidanceDir;
-	
+
 
 	moveVec.Normalize();
 	moveVec *= (0.2f * m_Objectspeed);
@@ -603,10 +610,7 @@ void Player::UpdateMatrix(Math::Vector3& nowPos)
 
 	case KdGameObject::eJustAvoidance:
 
-		if (!justCounterFlg)
-		{
-			m_mWorld = trans;
-		}
+		m_mWorld = rotation * trans;
 
 		break;
 
@@ -764,7 +768,7 @@ void Player::UpdateCircleCollision()
 						}
 					}
 				}
-			}			
+			}
 		}
 	}
 }

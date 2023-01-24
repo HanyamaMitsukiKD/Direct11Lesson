@@ -30,7 +30,7 @@ void EffectBase::SetAsset2D(const std::shared_ptr<KdTexture>& tex)
 		SetPattern(KdTrailPolygon::Trail_Pattern::eBillboard);
 }
 
-void EffectBase::DrawNoLighting()
+void EffectBase::DrawEffect()
 {
 	if (!m_spPoly) { return; }
 

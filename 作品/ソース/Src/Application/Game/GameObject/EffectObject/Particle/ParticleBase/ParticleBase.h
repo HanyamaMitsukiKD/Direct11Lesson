@@ -11,7 +11,8 @@ public:
 
 	virtual void Init(){}
 	virtual void Update(Math::Vector3 pos){}
-	virtual void DrawNoLighting()override;
+	virtual void DrawBright() override;
+
 
 	virtual void Emit(Math::Vector3 a_pos, Math::Vector3 a_move,
 		float a_size = 1, Math::Color a_color = Math::Color(1, 1, 1, 1),

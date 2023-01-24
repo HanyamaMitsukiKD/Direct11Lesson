@@ -10,11 +10,10 @@ public:
 
 	void Update()override;
 	void SetMatrix(const float size, const Math::Vector3& pos, const Math::Vector3& dir);
-	void DrawNoLighting()override;
+	void DrawBright()override;
 
 	void SetModel(std::shared_ptr<KdModelData>& Model);
-
-
+	
 	float EaseOutCirc(float progress)
 	{
 		return (float)sqrt(1 - pow(progress - 1, 2));

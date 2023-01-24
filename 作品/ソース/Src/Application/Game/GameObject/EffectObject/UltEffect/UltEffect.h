@@ -11,6 +11,7 @@ public:
 
 	void Update()override;
 	void SetMatrix(const float size, const float zpos, const Math::Vector3& pos, const Math::Vector3& dir);
+	void DrawBright()override;
 
 	void SetPlayerMat(const Math::Matrix& mat)
 	{

@@ -93,12 +93,12 @@ bool KdModelObject::CollisionRayToModel(
 		//m_spModel->GetMesh(i);	//毎回nullptrチェックしてる
 		std::shared_ptr<KdMesh> spMesh = m_spModel->GetDataNodes()[i].m_spMesh;
 		
-
-		//引数が参照なら実体を渡す
-		//リザルトを受け取る
-		KdMeshIntersect(*spMesh, rayPos, rayDir, rayRange,
-			m_spModel->GetNodes()[i].m_worldTransform * m_mWorld, &tempRes);
-
+		if (spMesh) {
+			//引数が参照なら実体を渡す
+			//リザルトを受け取る
+			KdMeshIntersect(*spMesh, rayPos, rayDir, rayRange,
+				m_spModel->GetNodes()[i].m_worldTransform * m_mWorld, &tempRes);
+		}
 
 		//もっとも距離が近いものを抽出して返す
 		if (!tempRes.m_hit) { continue; }

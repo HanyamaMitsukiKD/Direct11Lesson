@@ -12,7 +12,7 @@ public:
 
 	eClassID GetClassID() const override { return eStage; }
 
-	
+	const Math::Vector3 GetPlayerInitPos();
 
 protected:
 

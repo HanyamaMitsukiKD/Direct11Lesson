@@ -93,4 +93,6 @@ private:
 	Math::Vector3 animationPos;
 
 	std::list<std::shared_ptr<SwordEffect>>	m_spSwordEffects;
+
+	bool m_battleRound2Flg = false;
 };

@@ -108,4 +108,6 @@ private:
 	std::weak_ptr<normalEnemy>	m_wpEnemy;				//エネミー情報
 
 	// ------------------------------------------------------------------------------------------
+	//KeyUI
+	std::shared_ptr<KdTexture>	m_spKeyUITex = nullptr;			
 };

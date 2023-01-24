@@ -30,6 +30,7 @@ public:
 	virtual void Update() = 0;									
 	virtual void DrawLighting() {}
 	virtual void DrawNoLighting() {}
+	virtual void DrawBright() {}
 	virtual void DrawSprite() {}
 	virtual void SetAsset(std::string_view fileName) {};
 

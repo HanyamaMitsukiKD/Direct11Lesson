@@ -27,7 +27,7 @@ void Title::DrawSprite()
 {
 	if (!m_spTexture) { return; }
 	D3D.WorkShaderManager().m_spriteShader.DrawTex(m_spTexture.get(), 0, 0);
-	D3D.WorkShaderManager().m_spriteShader.DrawTex(m_spRogoTexture.get(), 0, 30);
+	D3D.WorkShaderManager().m_spriteShader.DrawTex(m_spRogoTexture.get(), 0, 50);
 
 	Math::Color col = { 1,1,1,m_alpha };
 	Math::Rectangle rec = { 0,0,630,100 };

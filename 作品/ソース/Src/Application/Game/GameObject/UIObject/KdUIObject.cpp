@@ -38,6 +38,8 @@ void KdUIObject::Init()
 	m_ultGugeSpeed = 1.0f / (60.0f * 1);
 	m_ultGugesProgress = 0;
 	//----------------------------------------------------------------------------
+
+	SetAsset(m_spKeyUITex, "Asset/Texture/UI/PlayerUI/KeyUI.png");
 }
 
 void KdUIObject::Update()
@@ -111,6 +113,9 @@ void KdUIObject::DrawSprite()
 
 		//エネミー状態
 		DrawEnemyHP();
+
+		// KeyUI
+		D3D.WorkShaderManager().m_spriteShader.DrawTex(m_spKeyUITex.get(), 480, -280);
 	}
 
 	// シーンチェンジ用の画像
@@ -121,6 +126,8 @@ void KdUIObject::DrawSprite()
 		D3D.WorkShaderManager().m_spriteShader.DrawTex(m_spNowLoadingTex.get(),
 			(int)m_sceneChengePos.x + 463, (int)m_sceneChengePos.y - 230, 275, 232, &Math::Rectangle{ m_nowLoadingRec * 275 ,0,275,232 });
 	}
+
+	
 }
 
 void KdUIObject::DrawPlayerHP()

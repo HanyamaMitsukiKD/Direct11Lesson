@@ -17,6 +17,7 @@ bool KdMeshIntersect(const KdMesh& mesh, const DirectX::XMVECTOR& rayPos, const 
 	DirectX::XMVECTOR rayDirInv = XMVector3TransformNormal(rayDir, invMat);
 
 	float dirLength = DirectX::XMVector3Length(rayDirInv).m128_f32[0];
+	if (!dirLength) { return false; }
 
 	// レイの方向ベクトルの長さ=拡大率で判定限界距離を補正
 	// ※逆行列に拡縮が入っていると、レイの長さが変わるため
@@ -35,10 +36,8 @@ bool KdMeshIntersect(const KdMesh& mesh, const DirectX::XMVECTOR& rayPos, const 
 	{
 		// AABB vs レイ
 		float AABBdist = FLT_MAX;
-		DirectX::BoundingBox aabb;
-		mesh.GetBoundingBox().Transform(aabb, matrix);
 
-		if (aabb.Intersects(rayPos, rayDir, AABBdist) == false) { return false; }
+		if (!mesh.GetBoundingBox().Intersects(rayPosInv, rayDirInv, AABBdist)) { return false; }
 
 		// 最大距離外なら範囲外なので中止
 		if (AABBdist > limitRange) { return false; }

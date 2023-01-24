@@ -28,3 +28,8 @@ void SlashingEffect::SetMatrixS(const Math::Vector3& pos)
 {
 	m_Trans = Math::Matrix::CreateTranslation(pos);
 }
+
+void SlashingEffect::DrawBright()
+{
+	DrawEffect();
+}

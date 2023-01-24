@@ -3,6 +3,7 @@
 #include "StandardShader/KdStandardShader.h"
 #include "EffectShader/KdEffectShader.h"
 #include "SpriteShader/KdSpriteShader.h"
+#include<System/Shader/KdPostProcessShader.h>
 
 //==========================================================
 //
@@ -34,6 +35,7 @@ public:
 	KdStandardShader	m_standardShader;	// 光の影響を受ける物質を描画するシェーダ
 	KdEffectShader		m_effectShader;		// 光の影響を受けない物質を描画するシェーダ
 	KdSpriteShader		m_spriteShader;		// 2Dテクスチャ描画シェーダ
+	KdPostProcessShader m_postProcessShader;// ポストエフェクト用のシェーダー
 
 	//==========================
 	//

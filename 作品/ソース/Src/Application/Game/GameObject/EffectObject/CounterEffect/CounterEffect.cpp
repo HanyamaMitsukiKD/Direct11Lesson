@@ -59,3 +59,8 @@ void Counter::SetMatrix(const Math::Vector3& pos, const Math::Vector3& dir)
 
 	zpos = -5;
 }
+
+void Counter::DrawBright()
+{
+	DrawEffect();
+}

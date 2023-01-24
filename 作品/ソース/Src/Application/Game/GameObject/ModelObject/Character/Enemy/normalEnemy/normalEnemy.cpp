@@ -26,7 +26,7 @@ void normalEnemy::Init()
 	eObjectState = KdGameObject::eStandBy;
 
 	Math::Matrix trans;			//エネミー初期座標
-	trans.Translation({ 0,10,0 });
+	trans.Translation(GetPos());
 
 	m_mWorld =
 		Math::Matrix::CreateRotationY
@@ -40,6 +40,8 @@ void normalEnemy::Init()
 	m_nMoveFlg = false;
 
 	m_progress = 0.0f;
+
+	m_battleRound2Flg = false;
 }
 
 void normalEnemy::Update()
@@ -307,6 +309,15 @@ void normalEnemy::Update()
 		}
 	}
 
+	// HPが半分切ったら　728
+	if (enemyHP < (728 / 2))
+	{
+		if (!m_battleRound2Flg)
+		{
+			KdGameAudioManager::GetInstance().PlayGameBGM2();
+			m_battleRound2Flg = true;
+		}
+	}
 
 	//円判定
 	UpdateCircleCollision();
@@ -623,7 +634,7 @@ void normalEnemy::UpdateCircleCollision()
 				{
 					if (Application::Instance().GetGameSystem()->GetPlayer()->GetCounterCountFlg())
 					{
-						enemyHP -= 5.0f;
+						enemyHP -= 7.0f;
 					}
 					else
 					{

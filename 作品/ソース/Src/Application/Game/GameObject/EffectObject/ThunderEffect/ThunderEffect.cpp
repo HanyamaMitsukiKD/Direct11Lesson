@@ -65,3 +65,8 @@ void ThunderEffect::SetMatrix(const Math::Vector3& pos, const Math::Vector3& dir
 
 	m_lifeSpanMax = m_lifeSpan;
 }
+
+void ThunderEffect::DrawBright()
+{
+	DrawEffect();
+}

@@ -11,8 +11,8 @@ public:
 	virtual void Update(Math::Vector3& Pos){}
 	void SetAsset(std::string_view fileName)override;
 	void SetAsset2D(const std::shared_ptr<KdTexture>& tex);
-	void DrawNoLighting()override;
-
+	void DrawEffect();
+	
 	void SetDrawFrameMax(int trailMax);
 
 	virtual void SetMatrix(const Math::Vector3& pos, const Math::Vector3& dir) {};

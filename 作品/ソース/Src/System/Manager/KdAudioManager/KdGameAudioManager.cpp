@@ -164,12 +164,18 @@ void KdGameAudioManager::SoundStop()
 
 void KdGameAudioManager::PlayTitleBGM()
 {
-	m_audioManager.Play("Asset/BGM/Title.wav", true);
+	m_audioManager.Play("Asset/BGM/title.wav", true);
 }
 
 void KdGameAudioManager::PlayGameBGM()
 {
-	m_audioManager.Play("Asset/BGM/gameBgm.wav", true);
+	m_audioManager.Play("Asset/BGM/gameBGM1.wav", true);
+}
+
+void KdGameAudioManager::PlayGameBGM2()
+{
+	m_audioManager.StopAllSound();
+	m_audioManager.Play("Asset/BGM/gameBGM2.wav", true);
 }
 
 void KdGameAudioManager::BomSE()

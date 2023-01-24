@@ -11,6 +11,7 @@ public:
 	void Update()override;
 	void SetMatrix(const Math::Vector3& pos, const Math::Vector3& dir)override;
 
+	void DrawNoLighting() override;
 
 private:
 

@@ -32,3 +32,8 @@ void Attack::SetMatrix(const Math::Vector3& pos, const Math::Vector3& dir)
 	m_mWorld = Math::Matrix::CreateScale(0.1f) *
 		Math::Matrix::CreateWorld(pos, -dir, Math::Vector3::Up);
 }
+
+void Attack::DrawBright()
+{
+	DrawEffect();
+}

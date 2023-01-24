@@ -8,7 +8,8 @@
         {
             "name" : "Scene",
             "nodes" : [
-                0
+                0,
+                1
             ]
         }
     ],
@@ -25,6 +26,19 @@
                 -0.037023499608039856,
                 -0.6802469491958618,
                 -0.5139238834381104
+            ]
+        },
+        {
+            "name" : "StartPoint_Player",
+            "scale" : [
+                1.4084583520889282,
+                1.4084583520889282,
+                1.4084583520889282
+            ],
+            "translation" : [
+                -5.009108543395996,
+                9.414392471313477,
+                44.936832427978516
             ]
         }
     ],
@@ -54,10 +68,9 @@
                     "attributes" : {
                         "POSITION" : 0,
                         "NORMAL" : 1,
-                        "TANGENT" : 2,
-                        "TEXCOORD_0" : 3
+                        "TEXCOORD_0" : 2
                     },
-                    "indices" : 4,
+                    "indices" : 3,
                     "material" : 0
                 }
             ]
@@ -112,16 +125,10 @@
             "bufferView" : 2,
             "componentType" : 5126,
             "count" : 446,
-            "type" : "VEC4"
-        },
-        {
-            "bufferView" : 3,
-            "componentType" : 5126,
-            "count" : 446,
             "type" : "VEC2"
         },
         {
-            "bufferView" : 4,
+            "bufferView" : 3,
             "componentType" : 5123,
             "count" : 1014,
             "type" : "SCALAR"
@@ -140,18 +147,13 @@
         },
         {
             "buffer" : 0,
-            "byteLength" : 7136,
+            "byteLength" : 3568,
             "byteOffset" : 10704
         },
         {
             "buffer" : 0,
-            "byteLength" : 3568,
-            "byteOffset" : 17840
-        },
-        {
-            "buffer" : 0,
             "byteLength" : 2028,
-            "byteOffset" : 21408
+            "byteOffset" : 14272
         }
     ],
     "samplers" : [
@@ -162,7 +164,7 @@
     ],
     "buffers" : [
         {
-            "byteLength" : 23436,
+            "byteLength" : 16300,
             "uri" : "stage_Ground.bin"
         }
     ]

@@ -16,12 +16,14 @@ public:
 	const std::shared_ptr<KdModelWork>& GetModel_Stage() const;
 	
 
+	const std::shared_ptr<KdModelWork>& GetModel_Sky() const;
 	const std::shared_ptr<KdModelWork>& GetModel_StageGround() const;
 	const std::shared_ptr<KdModelWork>& GetModel_Player() const;
 	const std::shared_ptr<KdModelWork>& GetModel_Sword() const;
 	const std::shared_ptr<KdModelWork>& GetModel_Enemy() const;
 
 private:
+	std::shared_ptr<KdModelWork>	m_spModel_Sky = nullptr;
 	std::shared_ptr<KdModelWork>	m_spModel_Stage = nullptr;
 	std::shared_ptr<KdModelWork>	m_spModel_StageGround = nullptr;
 	std::shared_ptr<KdModelWork>	m_spModel_Player = nullptr;

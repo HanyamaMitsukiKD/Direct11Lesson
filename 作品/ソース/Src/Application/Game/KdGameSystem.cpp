@@ -28,7 +28,7 @@ void KdGameSystem::Init()
 		m_UI = std::make_shared<KdUIObject>();
 		m_UI->Init();
 	}
-	
+
 
 	// レンダー
 	m_postRTTex.CreateRenderTarget(
@@ -43,6 +43,20 @@ void KdGameSystem::Init()
 		0.0f,0.0f,
 		(float)m_postRTTex.GetWidth(),
 		(float)m_postRTTex.GetHeight(),
+		0.0f,1.0f };
+
+	m_brightRTTex.CreateRenderTarget(
+		D3D.GetBackBuffer()->GetWidth(),
+		D3D.GetBackBuffer()->GetHeight());
+
+	m_brightDSTex.CreateDepthStencil(
+		D3D.GetBackBuffer()->GetWidth(),
+		D3D.GetBackBuffer()->GetHeight());
+
+	m_brightVP = {
+		0.0f,0.0f,
+		(float)m_brightRTTex.GetWidth(),
+		(float)m_brightRTTex.GetHeight(),
 		0.0f,1.0f };
 
 	// デバック
@@ -137,16 +151,23 @@ void KdGameSystem::PreDraw()
 		D3D.WorkZBuffer()->WorkDSView(),
 		D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
 
-	if (KdThrowManager::GetInstance().GetThrowFlg())
-	{
-		// レンダー関係初期化
-		D3D.WorkDevContext()->ClearRenderTargetView(
-			m_postRTTex.WorkRTView(), col);
+	// ライブルーム関係初期化
+	D3D.WorkDevContext()->ClearRenderTargetView(
+		m_brightRTTex.WorkRTView(), kBlackColor);
 
-		D3D.WorkDevContext()->ClearDepthStencilView(
-			m_postDSTex.WorkDSView(),
-			D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
-	}
+	D3D.WorkDevContext()->ClearDepthStencilView(
+		m_brightDSTex.WorkDSView(),
+		D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
+
+
+	// レンダー関係初期化
+	D3D.WorkDevContext()->ClearRenderTargetView(
+		m_postRTTex.WorkRTView(), col);
+
+	D3D.WorkDevContext()->ClearDepthStencilView(
+		m_postDSTex.WorkDSView(),
+		D3D11_CLEAR_DEPTH | D3D11_CLEAR_STENCIL, 1.0f, 0);
+
 
 	if (m_spCamera)
 	{
@@ -167,7 +188,7 @@ void KdGameSystem::Draw()
 	if (KdThrowManager::GetInstance().GetThrowFlg())
 	{
 		DevCon->OMGetRenderTargets(1, &pSaveRTV, &pSaveDSV);
-		DevCon->RSGetViewports(&numViews, &saveVP);	
+		DevCon->RSGetViewports(&numViews, &saveVP);
 
 		DevCon->OMSetRenderTargets
 		(1, m_postRTTex.WorkRTViewAddress(),
@@ -176,7 +197,6 @@ void KdGameSystem::Draw()
 		DevCon->RSSetViewports(1, &m_postVP);
 	}
 	//-------------------------------------------
-
 
 	D3D.WorkShaderManager().m_standardShader.SetToDevice();
 
@@ -192,6 +212,8 @@ void KdGameSystem::Draw()
 	{
 		spObj->DrawNoLighting();
 	}
+
+	EffectDraw();
 
 	// レンダーターゲットの復元
 	if (KdThrowManager::GetInstance().GetThrowFlg())
@@ -226,6 +248,52 @@ void KdGameSystem::Draw()
 
 	//デバック
 	//KdDebug::GetInstance().Draw();
+}
+
+void KdGameSystem::EffectDraw()
+{
+	//--------------------------------------------------------
+	// レンダーターゲットを光源用に切り替え
+	ID3D11DeviceContext* DevCon = D3D.WorkDevContext();
+
+	// 現在のレンダーターゲットの保存
+	ID3D11RenderTargetView* pSaveRTV = nullptr;
+	ID3D11DepthStencilView* pSaveDSV = nullptr;
+	DevCon->OMGetRenderTargets(1, &pSaveRTV, &pSaveDSV);
+
+	UINT numViews = 1;
+	D3D11_VIEWPORT saveVP;
+	DevCon->RSGetViewports(&numViews, &saveVP);	// 第2引数の状態によって第1引数の使われ方が変わる
+
+	// レンダーターゲットの切り替え
+	//: これだけだとなにも映らない(バックバッファーになにも描かれてない)
+	//: Zバッファー(深度情報)が正しく初期化されていない
+	DevCon->OMSetRenderTargets
+	(1, m_brightRTTex.WorkRTViewAddress(),
+		m_brightDSTex.WorkDSView());
+
+	DevCon->RSSetViewports(1, &m_brightVP);
+
+	for (std::shared_ptr<KdGameObject>& spObj : m_objects)
+	{
+		spObj->DrawBright();
+	}
+
+	// レンダーターゲットの復元
+	DevCon->OMSetRenderTargets(1, &pSaveRTV, pSaveDSV);
+	DevCon->RSSetViewports(numViews, &saveVP);
+
+	KdSafeRelease(pSaveRTV);
+	KdSafeRelease(pSaveDSV);
+
+	D3D.WorkShaderManager().m_postProcessShader.GenerateLightBloomTexture(m_brightRTTex, m_brightRTTex);
+	D3D.WorkShaderManager().m_postProcessShader.SetToDevice();					// レンダーターゲットの切り替え
+	D3D.WorkShaderManager().ChangeBlendState(D3D.WorkShaderManager().m_bs_Add);	// 加算合成
+	D3D.WorkShaderManager().m_postProcessShader.Draw(m_brightRTTex);			// 描画
+	D3D.WorkShaderManager().UndoBlendState();
+	//--------------------------------------------------------
+
+	//--------------------------------------------------------
 }
 
 
@@ -270,16 +338,23 @@ void KdGameSystem::InitGame()
 
 	//空(というより地面以外)
 	std::shared_ptr<KdModelObject> m_spSky = std::make_shared<KdModelObject>();
-	m_spSky->SetModelDate(KdAssetManager::GetInstance().m_ModelAsset.GetModel_Stage());
+	m_spSky->SetModelDate(KdAssetManager::GetInstance().m_ModelAsset.GetModel_Sky());
 	m_objects.push_back(m_spSky);
 
-	Math::Vector3 playerInitPos = { 0,5,-50 };			//プレイヤー初期座標
-	Math::Vector3 enemyInitPos = { 0,10,0 };			//エネミー初期座標
+	std::shared_ptr<KdModelObject> m_spStage = std::make_shared<KdModelObject>();
+	m_spStage->SetModelDate(KdAssetManager::GetInstance().m_ModelAsset.GetModel_Stage());
+	m_objects.push_back(m_spStage);
+
+
 
 	//ステージ
 	std::shared_ptr<Stage1>	m_spTerrain = std::make_shared<Stage1>();
 	m_spTerrain->SetModelDate(KdAssetManager::GetInstance().m_ModelAsset.GetModel_StageGround());
 	m_objects.push_back(m_spTerrain);
+
+	//Math::Vector3 playerInitPos = { 0,5,-50 };			//プレイヤー初期座標
+	Math::Vector3 playerInitPos = m_spTerrain->GetPlayerInitPos();			//プレイヤー初期座標
+
 
 	//プレイヤー関係--------------------------------
 	//プレイヤー
@@ -294,11 +369,12 @@ void KdGameSystem::InitGame()
 	//敵1
 	m_spNormalEnemy = std::make_shared<normalEnemy>();
 	m_spNormalEnemy->SetModelDate(KdAssetManager::GetInstance().m_ModelAsset.GetModel_Enemy());
+
+	Math::Vector3 enemyInitPos = { 0,10,0 };			//エネミー初期座標
 	m_spNormalEnemy->SetPos(enemyInitPos);
 	m_spNormalEnemy->Init();
 	m_spNormalEnemy->SetPlayer(m_spRobot);
 	m_objects.push_back(m_spNormalEnemy);
-	
 
 	{
 		m_UI->SetPlayer(m_spPlayer);

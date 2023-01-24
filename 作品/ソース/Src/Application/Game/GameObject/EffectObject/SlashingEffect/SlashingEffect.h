@@ -11,6 +11,7 @@ public:
 	void Update(Math::Vector3& Pos)override;
 	void SetMatrixS(const Math::Vector3& pos);
 
+	void DrawBright() override;
 
 private:
 	Math::Matrix m_Trans;

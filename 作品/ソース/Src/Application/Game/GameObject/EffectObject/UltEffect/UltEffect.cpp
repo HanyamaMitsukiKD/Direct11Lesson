@@ -67,3 +67,8 @@ void UltEffect::SetMatrix(const float size, const float zpos, const Math::Vector
 
 	m_lifeSpanMax = m_lifeSpan;
 }
+
+void UltEffect::DrawBright()
+{
+	DrawEffect();
+}

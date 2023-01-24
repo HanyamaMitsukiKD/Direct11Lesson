@@ -30,3 +30,8 @@ void ParticleEffect::SetMatrix(const float size, const Math::Vector3& pos, const
 	m_mWorld = Math::Matrix::CreateScale(size) *
 		Math::Matrix::CreateWorld(pos, -dir, Math::Vector3::Up);
 }
+
+void ParticleEffect::DrawBright()
+{
+	DrawEffect();
+}
