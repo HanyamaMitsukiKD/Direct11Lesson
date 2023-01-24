@@ -1,0 +1,754 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Library">
+      <UniqueIdentifier>{d5173dcf-2786-4f98-bd55-d03549637dfe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src">
+      <UniqueIdentifier>{80d0a5a9-6779-4863-bede-cc22a4986dc5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Framework">
+      <UniqueIdentifier>{f5928314-3ee2-4e39-abfa-d93aa9ee5891}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Framework\Direct3D">
+      <UniqueIdentifier>{f193abd5-e51c-466e-a937-722bc9175e9a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Framework\Utility">
+      <UniqueIdentifier>{f5d733b1-5031-4659-a9d4-0dd3add1e5fb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Framework\Window">
+      <UniqueIdentifier>{cb022f2a-c5a2-449b-9b70-5110aff8550f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\tinygltf">
+      <UniqueIdentifier>{307bfbcd-124f-4ad7-85f5-3fd94f814b1f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Framework\Shader">
+      <UniqueIdentifier>{93543c0c-58fe-4a94-8279-7be3021b65b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Framework\Shader\SpriteShader">
+      <UniqueIdentifier>{2da4d471-f4e8-4b2d-bdef-b93f91523b8b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application">
+      <UniqueIdentifier>{d0d0f9cf-dabd-4346-bc9a-d9c04cf42372}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Framework\Math">
+      <UniqueIdentifier>{04f33e76-24f0-4a58-9355-5770b3f6f9c6}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Framework\Audio">
+      <UniqueIdentifier>{2a0de30f-d7e8-4517-a9a1-20de6e434592}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\System">
+      <UniqueIdentifier>{256347e2-b865-40db-a803-ea2406075a10}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\System">
+      <UniqueIdentifier>{4bdc25a2-3137-4213-a263-36b8d2ec5162}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Framework\Shader\StandardShader">
+      <UniqueIdentifier>{fa092749-f3d0-43dd-a34d-f2c9eeaa0bee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Framework\Shader\EffectShader">
+      <UniqueIdentifier>{b978fbf2-23fe-42e8-840c-6910af7e377f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game">
+      <UniqueIdentifier>{13151c11-a550-46c9-9ccb-e9aa6922a3ef}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\System\GameObject">
+      <UniqueIdentifier>{f8dc4462-226b-47db-8a64-4dbd7cf77d0d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject">
+      <UniqueIdentifier>{f9b1c47b-b1d2-439f-8bc5-c1c4a987ce85}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\UIObject">
+      <UniqueIdentifier>{d597bee1-4891-4143-9c83-193ef4d98fb4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\ModelObject">
+      <UniqueIdentifier>{85cf4de7-7763-474f-9795-d426ef79f314}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\EventObject">
+      <UniqueIdentifier>{f66588c0-b0b4-4354-b6dc-dc5b0c80aeda}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\ModelObject\Character">
+      <UniqueIdentifier>{0e3ab825-78a3-4f79-ac51-1fec50f8cc9c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\ModelObject\Character\Player">
+      <UniqueIdentifier>{6bcff479-f241-48e4-87c5-28c0f8c1b3df}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\ModelObject\Character\Enemy">
+      <UniqueIdentifier>{7263912d-aae2-4fcb-8dd3-8c8cfb7d5d0c}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\TitleObject">
+      <UniqueIdentifier>{45f8845f-339e-4eca-bb2b-fcbe85c82ffd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\StageSelectObject">
+      <UniqueIdentifier>{206daeee-495e-4efa-b53f-d06f6e0ca443}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\ResultObject">
+      <UniqueIdentifier>{a967d781-7be8-4d6f-80a9-d6c2cbd45adc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\CameraObject">
+      <UniqueIdentifier>{fae30c44-de5b-4df4-bc60-a5c6714b5b97}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\ModelObject\Character\Enemy\normalEnemy">
+      <UniqueIdentifier>{eb9136af-8ec7-43dd-b08b-04c5805880ee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\ModelObject\Bullet">
+      <UniqueIdentifier>{c20ad20b-9fe2-4edf-bbf7-e63d86c63505}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\ModelObject\Bullet\nomalBullet">
+      <UniqueIdentifier>{a0b37f1f-4023-4203-8154-fd9fed811ff0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\ModelObject\Stage">
+      <UniqueIdentifier>{8326b1e2-edba-41f5-b92d-0879e8174bcd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\ModelObject\Stage\Stage1">
+      <UniqueIdentifier>{0a7fde99-ef04-44c1-bd59-0648c4db8fcc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\ModelObject\PlayerWeapon">
+      <UniqueIdentifier>{3c692fb6-eba8-4d24-89ca-5ea974e17ac5}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\ModelObject\PlayerWeapon\Sword">
+      <UniqueIdentifier>{82d8aaaa-ec20-4923-9ddc-cd4939c26cd7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Library\imgui">
+      <UniqueIdentifier>{b1bae71c-7c10-4af8-ad40-5e2f3bcb9748}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\System\Manager">
+      <UniqueIdentifier>{f182fed1-85b6-46e0-b0b0-c14f93841b1d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\System\Manager\KdAudioManager">
+      <UniqueIdentifier>{675ab396-623e-4c91-bd4c-007ccc7952f2}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\System\Manager\KdAssetManager">
+      <UniqueIdentifier>{7fafef88-18ce-477b-aca2-db94d552d433}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\System\Manager\KdInputManager">
+      <UniqueIdentifier>{641090ce-2d5e-447a-84df-e3834ac76aee}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\EffectObject">
+      <UniqueIdentifier>{e646a1cb-b961-4f4a-8c58-f650a6d9061f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\EffectObject\EffectBase">
+      <UniqueIdentifier>{edf4c320-445d-4c06-9a6e-b9259a67f04a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\EffectObject\AttackEffect">
+      <UniqueIdentifier>{80c9ea02-b5ec-4a22-905d-2bce46634811}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\EffectObject\CounterEffect">
+      <UniqueIdentifier>{d21b5631-e1ce-4e3c-b916-cdedc17435da}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\EffectObject\SmokeEffect">
+      <UniqueIdentifier>{2a361734-6e2c-4aa7-b802-90bae46205cd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\System\Manager\KdDebugManager">
+      <UniqueIdentifier>{c351a947-cba3-4de7-8142-51335f24fbfb}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\EffectObject\ThunderEffect">
+      <UniqueIdentifier>{92cafc71-56f2-4262-95c6-5b73428b527a}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\EffectObject\UltEffect">
+      <UniqueIdentifier>{9033dbf1-8d37-4cfd-9775-665643eba956}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\EffectObject\UltEffect\UltParticle">
+      <UniqueIdentifier>{53dc117f-ab05-4e4f-ad65-786ab7122b11}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\EffectObject\Particle">
+      <UniqueIdentifier>{58162896-1ce9-4c4e-b3d7-8bce6b9c8d33}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\EffectObject\Particle\ParticleEffect">
+      <UniqueIdentifier>{b07fbbe6-39fc-4920-b539-10ab8faad4f7}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\EffectObject\SlashingEffect">
+      <UniqueIdentifier>{fcc8a6c9-0b24-4118-b3f2-aff0cb333d24}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\EffectObject\SwordEffect">
+      <UniqueIdentifier>{bf2ae702-8358-4825-881b-731392cfa403}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\System\Manager\KdThrowManager">
+      <UniqueIdentifier>{5ab1d45c-7ba6-47a5-ba11-b921fb7697d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\EffectObject\Particle\ParticleBase">
+      <UniqueIdentifier>{51527a02-529c-4957-a02a-d4e67235821f}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\EffectObject\Particle\ParticleFire">
+      <UniqueIdentifier>{f954eca4-4b51-43c2-ae63-1c77b4818122}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\ModelObject\Character\Player\CounterState">
+      <UniqueIdentifier>{d7004729-463b-4d95-8d42-2b0829b95d3d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\System\Manager\KdAssetManager\KdAssetUI">
+      <UniqueIdentifier>{3c8757fa-0d1f-4926-8b8a-fea6bbf08d26}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\System\Manager\KdAssetManager\KdAssetModel">
+      <UniqueIdentifier>{082d975b-78d7-4719-8a65-23898defd683}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\System\Manager\KdAssetManager\KdAssetEffect">
+      <UniqueIdentifier>{5685edb3-0ade-44e5-b38e-d54b2b4dee61}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState">
+      <UniqueIdentifier>{ec8afc97-0927-448a-8945-ac20f07a88b1}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Move">
+      <UniqueIdentifier>{f1890219-c5c7-477b-94c4-f977fdd92ecc}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\StateBase">
+      <UniqueIdentifier>{520b8a05-9d34-4f67-bfbb-da8ca1721753}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Avoidance">
+      <UniqueIdentifier>{bf43915d-770b-407e-b054-f4f26859261d}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Damage">
+      <UniqueIdentifier>{8620e4f8-a48d-411f-9fbe-d5b8dfd4b6d4}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Attack">
+      <UniqueIdentifier>{3a425e1f-76b8-4348-b34f-ca36af379e86}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Ult">
+      <UniqueIdentifier>{ffaa9aa5-f1b9-4624-9408-6869875cce02}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\JustAvoidance">
+      <UniqueIdentifier>{b1f4c634-4b7c-45e2-827d-1ddd91014f9b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\JustAttack">
+      <UniqueIdentifier>{0a591f4e-3581-4658-a0bf-f6fb5adf5051}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="src\Pch.h">
+      <Filter>Src</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\tinygltf\json.hpp">
+      <Filter>Library\tinygltf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\tinygltf\stb_image.h">
+      <Filter>Library\tinygltf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\tinygltf\stb_image_write.h">
+      <Filter>Library\tinygltf</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\tinygltf\tiny_gltf.h">
+      <Filter>Library\tinygltf</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\main.h">
+      <Filter>Src\Application</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Framework\Direct3D\KdDirect3D.h">
+      <Filter>Src\Framework\Direct3D</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Framework\Direct3D\KdTexture.h">
+      <Filter>Src\Framework\Direct3D</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Framework\Direct3D\KdBuffer.h">
+      <Filter>Src\Framework\Direct3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Framework\Direct3D\KdGLTFLoader.h">
+      <Filter>Src\Framework\Direct3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Framework\Shader\KdShaderManager.h">
+      <Filter>Src\Framework\Shader</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Framework\Shader\SpriteShader\KdSpriteShader.h">
+      <Filter>Src\Framework\Shader\SpriteShader</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Framework\Utility\KdUtility.h">
+      <Filter>Src\Framework\Utility</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Framework\KdFramework.h">
+      <Filter>Src\Framework</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\strconv.h">
+      <Filter>Library</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Framework\Window\KdWindow.h">
+      <Filter>Src\Framework\Window</Filter>
+    </ClInclude>
+    <ClInclude Include="src\Framework\Direct3D\KdMesh.h">
+      <Filter>Src\Framework\Direct3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Framework\Direct3D\KdModel.h">
+      <Filter>Src\Framework\Direct3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Framework\Math\KdCollision.h">
+      <Filter>Src\Framework\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Framework\Direct3D\KdSquarePolygon.h">
+      <Filter>Src\Framework\Direct3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Framework\Direct3D\KdTrailPolygon.h">
+      <Filter>Src\Framework\Direct3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Framework\Math\KdAnimation.h">
+      <Filter>Src\Framework\Math</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Framework\Audio\KdAudio.h">
+      <Filter>Src\Framework\Audio</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Framework\Direct3D\KdCamera.h">
+      <Filter>Src\Framework\Direct3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Framework\Shader\StandardShader\KdStandardShader.h">
+      <Filter>Src\Framework\Shader\StandardShader</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Framework\Shader\EffectShader\KdEffectShader.h">
+      <Filter>Src\Framework\Shader\EffectShader</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Framework\Direct3D\KdPolygon.h">
+      <Filter>Src\Framework\Direct3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Framework\Direct3D\KdMaterial.h">
+      <Filter>Src\Framework\Direct3D</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\System\GameObject\KdGameObject.h">
+      <Filter>Src\System\GameObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\KdModelObject.h">
+      <Filter>Src\Application\Game\GameObject\ModelObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\UIObject\KdUIObject.h">
+      <Filter>Src\Application\Game\GameObject\UIObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\EventObject\KdSceneChangeForClick.h">
+      <Filter>Src\Application\Game\GameObject\EventObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Character\CharacterBase.h">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Character</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Character\Player\Player.h">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Character\Player</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Character\Enemy\EnemyBase.h">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Character\Enemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\KdGameSystem.h">
+      <Filter>Src\Application\Game</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\TitleObject\Title.h">
+      <Filter>Src\Application\Game\GameObject\TitleObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\StageSelectObject\StageSelect.h">
+      <Filter>Src\Application\Game\GameObject\StageSelectObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\ResultObject\Result.h">
+      <Filter>Src\Application\Game\GameObject\ResultObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\CameraObject\TPSCamera.h">
+      <Filter>Src\Application\Game\GameObject\CameraObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\CameraObject\CameraBase.h">
+      <Filter>Src\Application\Game\GameObject\CameraObject</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Character\Enemy\normalEnemy\normalEnemy.h">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Character\Enemy\normalEnemy</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Bullet\BulletBase.h">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Bullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Bullet\nomalBullet\nomalBullet.h">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Bullet\nomalBullet</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Stage\Stage1\Stage1.h">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Stage\Stage1</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\PlayerWeapon\Sword\Sword.h">
+      <Filter>Src\Application\Game\GameObject\ModelObject\PlayerWeapon\Sword</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\PlayerWeapon\PlayerWeaponBase.h">
+      <Filter>Src\Application\Game\GameObject\ModelObject\PlayerWeapon</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\imgui\imgui_impl_dx11.h">
+      <Filter>Library\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\imgui\imgui_impl_win32.h">
+      <Filter>Library\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\imgui\imgui_internal.h">
+      <Filter>Library\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\imgui\imgui_stdlib.h">
+      <Filter>Library\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\imgui\imstb_rectpack.h">
+      <Filter>Library\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\imgui\imstb_textedit.h">
+      <Filter>Library\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\imgui\imstb_truetype.h">
+      <Filter>Library\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\imgui\ja_glyph_ranges.h">
+      <Filter>Library\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\imgui\imconfig.h">
+      <Filter>Library\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="..\Library\imgui\imgui.h">
+      <Filter>Library\imgui</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\System\Manager\KdAudioManager\KdGameAudioManager.h">
+      <Filter>Src\System\Manager\KdAudioManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\System\Manager\KdAssetManager\KdAssetManager.h">
+      <Filter>Src\System\Manager\KdAssetManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\System\Manager\KdInputManager\KdInputManager.h">
+      <Filter>Src\System\Manager\KdInputManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\EffectObject\EffectBase\EffectBase.h">
+      <Filter>Src\Application\Game\GameObject\EffectObject\EffectBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\EffectObject\AttackEffect\AttackEffect.h">
+      <Filter>Src\Application\Game\GameObject\EffectObject\AttackEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\EffectObject\CounterEffect\CounterEffect.h">
+      <Filter>Src\Application\Game\GameObject\EffectObject\CounterEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\EffectObject\SmokeEffect\SmokeEffect.h">
+      <Filter>Src\Application\Game\GameObject\EffectObject\SmokeEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\System\Manager\KdDebugManager\KdDebugManager.h">
+      <Filter>Src\System\Manager\KdDebugManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\EffectObject\ThunderEffect\ThunderEffect.h">
+      <Filter>Src\Application\Game\GameObject\EffectObject\ThunderEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\EffectObject\UltEffect\UltEffect.h">
+      <Filter>Src\Application\Game\GameObject\EffectObject\UltEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\EffectObject\UltEffect\UltParticle\UltParticle.h">
+      <Filter>Src\Application\Game\GameObject\EffectObject\UltEffect\UltParticle</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\EffectObject\Particle\ParticleEffect\ParticleEffect.h">
+      <Filter>Src\Application\Game\GameObject\EffectObject\Particle\ParticleEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\EffectObject\SlashingEffect\SlashingEffect.h">
+      <Filter>Src\Application\Game\GameObject\EffectObject\SlashingEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\EffectObject\SwordEffect\SwordEffect.h">
+      <Filter>Src\Application\Game\GameObject\EffectObject\SwordEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\System\Manager\KdThrowManager\KdThrowManager.h">
+      <Filter>Src\System\Manager\KdThrowManager</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\EffectObject\Particle\ParticleBase\ParticleBase.h">
+      <Filter>Src\Application\Game\GameObject\EffectObject\Particle\ParticleBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\EffectObject\Particle\ParticleFire\ParticleFire.h">
+      <Filter>Src\Application\Game\GameObject\EffectObject\Particle\ParticleFire</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Character\Player\CounterState\CounterState.h">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Character\Player\CounterState</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\System\Manager\KdAssetManager\KdAssetUI\KdAssetUI.h">
+      <Filter>Src\System\Manager\KdAssetManager\KdAssetUI</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\System\Manager\KdAssetManager\KdAssetModel\KdAssetModel.h">
+      <Filter>Src\System\Manager\KdAssetManager\KdAssetModel</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\System\Manager\KdAssetManager\KdAssetEffect\KdAssetEffect.h">
+      <Filter>Src\System\Manager\KdAssetManager\KdAssetEffect</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Move\PlayerMove.h">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Move</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Avoidance\PlayerAvoidance.h">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Avoidance</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Damage\PlayerDamage.h">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Damage</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Attack\PlayerAttack.h">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Attack</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Ult\PlayerUlt.h">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Ult</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\StateBase\StateBase.h">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\StateBase</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\JustAvoidance\PlayerJustAvoidance.h">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\JustAvoidance</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\JustAttack\PlayerJustAttack.h">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\JustAttack</Filter>
+    </ClInclude>
+    <ClInclude Include="Src\System\Easing.h">
+      <Filter>Src\System</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\Pch.cpp">
+      <Filter>Src</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\main.cpp">
+      <Filter>Src\Application</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Framework\Direct3D\KdDirect3D.cpp">
+      <Filter>Src\Framework\Direct3D</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Framework\Direct3D\KdTexture.cpp">
+      <Filter>Src\Framework\Direct3D</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Framework\Direct3D\KdBuffer.cpp">
+      <Filter>Src\Framework\Direct3D</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Framework\Direct3D\KdGLTFLoader.cpp">
+      <Filter>Src\Framework\Direct3D</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Framework\Shader\KdShaderManager.cpp">
+      <Filter>Src\Framework\Shader</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Framework\Shader\SpriteShader\KdSpriteShader.cpp">
+      <Filter>Src\Framework\Shader\SpriteShader</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Framework\Window\KdWindow.cpp">
+      <Filter>Src\Framework\Window</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Framework\Utility\KdUtility.cpp">
+      <Filter>Src\Framework\Utility</Filter>
+    </ClCompile>
+    <ClCompile Include="src\Framework\Direct3D\KdMesh.cpp">
+      <Filter>Src\Framework\Direct3D</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Framework\Direct3D\KdModel.cpp">
+      <Filter>Src\Framework\Direct3D</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Framework\Math\KdCollision.cpp">
+      <Filter>Src\Framework\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Framework\Direct3D\KdSquarePolygon.cpp">
+      <Filter>Src\Framework\Direct3D</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Framework\Direct3D\KdTrailPolygon.cpp">
+      <Filter>Src\Framework\Direct3D</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Framework\Math\KdAnimation.cpp">
+      <Filter>Src\Framework\Math</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Framework\Audio\KdAudio.cpp">
+      <Filter>Src\Framework\Audio</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Framework\Direct3D\KdCamera.cpp">
+      <Filter>Src\Framework\Direct3D</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Framework\Shader\StandardShader\KdStandardShader.cpp">
+      <Filter>Src\Framework\Shader\StandardShader</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Framework\Shader\EffectShader\KdEffectShader.cpp">
+      <Filter>Src\Framework\Shader\EffectShader</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Framework\Direct3D\KdMaterial.cpp">
+      <Filter>Src\Framework\Direct3D</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Framework\Direct3D\KdPolygon.cpp">
+      <Filter>Src\Framework\Direct3D</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\KdGameSystem.cpp">
+      <Filter>Src\Application\Game</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\KdModelObject.cpp">
+      <Filter>Src\Application\Game\GameObject\ModelObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\UIObject\KdUIObject.cpp">
+      <Filter>Src\Application\Game\GameObject\UIObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\EventObject\KdSceneChangeForClick.cpp">
+      <Filter>Src\Application\Game\GameObject\EventObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Character\CharacterBase.cpp">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Character</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Character\Player\Player.cpp">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Character\Player</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Character\Enemy\EnemyBase.cpp">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Character\Enemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\TitleObject\Title.cpp">
+      <Filter>Src\Application\Game\GameObject\TitleObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\StageSelectObject\StageSelect.cpp">
+      <Filter>Src\Application\Game\GameObject\StageSelectObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\ResultObject\Result.cpp">
+      <Filter>Src\Application\Game\GameObject\ResultObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\CameraObject\TPSCamera.cpp">
+      <Filter>Src\Application\Game\GameObject\CameraObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\CameraObject\CameraBase.cpp">
+      <Filter>Src\Application\Game\GameObject\CameraObject</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Character\Enemy\normalEnemy\normalEnemy.cpp">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Character\Enemy\normalEnemy</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Bullet\BulletBase.cpp">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Bullet</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Bullet\nomalBullet\nomalBullet.cpp">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Bullet\nomalBullet</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Stage\Stage1\Stage1.cpp">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Stage\Stage1</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\PlayerWeapon\Sword\Sword.cpp">
+      <Filter>Src\Application\Game\GameObject\ModelObject\PlayerWeapon\Sword</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\PlayerWeapon\PlayerWeaponBase.cpp">
+      <Filter>Src\Application\Game\GameObject\ModelObject\PlayerWeapon</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Library\imgui\imgui_draw.cpp">
+      <Filter>Library\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Library\imgui\imgui_impl_dx11.cpp">
+      <Filter>Library\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Library\imgui\imgui_impl_win32.cpp">
+      <Filter>Library\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Library\imgui\imgui_stdlib.cpp">
+      <Filter>Library\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Library\imgui\imgui_tables.cpp">
+      <Filter>Library\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Library\imgui\imgui_widgets.cpp">
+      <Filter>Library\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Library\imgui\imgui.cpp">
+      <Filter>Library\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="..\Library\imgui\imgui_demo.cpp">
+      <Filter>Library\imgui</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\System\Manager\KdAudioManager\KdGameAudioManager.cpp">
+      <Filter>Src\System\Manager\KdAudioManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\System\Manager\KdAssetManager\KdAssetManager.cpp">
+      <Filter>Src\System\Manager\KdAssetManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\System\Manager\KdInputManager\KdInputManager.cpp">
+      <Filter>Src\System\Manager\KdInputManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\EffectObject\EffectBase\EffectBase.cpp">
+      <Filter>Src\Application\Game\GameObject\EffectObject\EffectBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\EffectObject\AttackEffect\AttackEffect.cpp">
+      <Filter>Src\Application\Game\GameObject\EffectObject\AttackEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\EffectObject\CounterEffect\CounterEffect.cpp">
+      <Filter>Src\Application\Game\GameObject\EffectObject\CounterEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\EffectObject\SmokeEffect\SmokeEffect.cpp">
+      <Filter>Src\Application\Game\GameObject\EffectObject\SmokeEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\System\Manager\KdDebugManager\KdDebugManager.cpp">
+      <Filter>Src\System\Manager\KdDebugManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\EffectObject\ThunderEffect\ThunderEffect.cpp">
+      <Filter>Src\Application\Game\GameObject\EffectObject\ThunderEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\EffectObject\UltEffect\UltEffect.cpp">
+      <Filter>Src\Application\Game\GameObject\EffectObject\UltEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\EffectObject\UltEffect\UltParticle\UltParticle.cpp">
+      <Filter>Src\Application\Game\GameObject\EffectObject\UltEffect\UltParticle</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\EffectObject\Particle\ParticleEffect\ParticleEffect.cpp">
+      <Filter>Src\Application\Game\GameObject\EffectObject\Particle\ParticleEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\EffectObject\SlashingEffect\SlashingEffect.cpp">
+      <Filter>Src\Application\Game\GameObject\EffectObject\SlashingEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\EffectObject\SwordEffect\SwordEffect.cpp">
+      <Filter>Src\Application\Game\GameObject\EffectObject\SwordEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\System\Manager\KdThrowManager\KdThrowManager.cpp">
+      <Filter>Src\System\Manager\KdThrowManager</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\EffectObject\Particle\ParticleBase\ParticleBase.cpp">
+      <Filter>Src\Application\Game\GameObject\EffectObject\Particle\ParticleBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\EffectObject\Particle\ParticleFire\ParticleFire.cpp">
+      <Filter>Src\Application\Game\GameObject\EffectObject\Particle\ParticleFire</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Character\Player\CounterState\CounterState.cpp">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Character\Player\CounterState</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\System\Manager\KdAssetManager\KdAssetUI\KdAssetUI.cpp">
+      <Filter>Src\System\Manager\KdAssetManager\KdAssetUI</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\System\Manager\KdAssetManager\KdAssetModel\KdAssetModel.cpp">
+      <Filter>Src\System\Manager\KdAssetManager\KdAssetModel</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\System\Manager\KdAssetManager\KdAssetEffect\KdAssetEffect.cpp">
+      <Filter>Src\System\Manager\KdAssetManager\KdAssetEffect</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Move\PlayerMove.cpp">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Move</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Avoidance\PlayerAvoidance.cpp">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Avoidance</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Damage\PlayerDamage.cpp">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Damage</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Attack\PlayerAttack.cpp">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Attack</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Ult\PlayerUlt.cpp">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Ult</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\StateBase\StateBase.cpp">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\StateBase</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\JustAvoidance\PlayerJustAvoidance.cpp">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\JustAvoidance</Filter>
+    </ClCompile>
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\JustAttack\PlayerJustAttack.cpp">
+      <Filter>Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\JustAttack</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Src\Framework\Shader\inc_KdCommon.hlsli">
+      <Filter>Src\Framework\Shader</Filter>
+    </None>
+    <None Include="Src\Framework\Shader\SpriteShader\inc_KdSpriteShader.hlsli">
+      <Filter>Src\Framework\Shader\SpriteShader</Filter>
+    </None>
+    <None Include="Src\Framework\Shader\EffectShader\inc_KdEffectShader.hlsli">
+      <Filter>Src\Framework\Shader\EffectShader</Filter>
+    </None>
+    <None Include="Src\Framework\Shader\StandardShader\inc_KdStandardShader.hlsli">
+      <Filter>Src\Framework\Shader\StandardShader</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Src\Framework\Shader\SpriteShader\KdSpriteShader_PS.hlsl">
+      <Filter>Src\Framework\Shader\SpriteShader</Filter>
+    </FxCompile>
+    <FxCompile Include="Src\Framework\Shader\SpriteShader\KdSpriteShader_VS.hlsl">
+      <Filter>Src\Framework\Shader\SpriteShader</Filter>
+    </FxCompile>
+    <FxCompile Include="Src\Framework\Shader\StandardShader\KdStandardShader_PS.hlsl">
+      <Filter>Src\Framework\Shader\StandardShader</Filter>
+    </FxCompile>
+    <FxCompile Include="Src\Framework\Shader\StandardShader\KdStandardShader_VS.hlsl">
+      <Filter>Src\Framework\Shader\StandardShader</Filter>
+    </FxCompile>
+    <FxCompile Include="Src\Framework\Shader\StandardShader\KdStandardShader_VS_Skin.hlsl">
+      <Filter>Src\Framework\Shader\StandardShader</Filter>
+    </FxCompile>
+    <FxCompile Include="Src\Framework\Shader\EffectShader\KdEffectShader_PS.hlsl">
+      <Filter>Src\Framework\Shader\EffectShader</Filter>
+    </FxCompile>
+    <FxCompile Include="Src\Framework\Shader\EffectShader\KdEffectShader_VS.hlsl">
+      <Filter>Src\Framework\Shader\EffectShader</Filter>
+    </FxCompile>
+    <FxCompile Include="Src\Framework\Shader\StandardShader\KdStandardShader_Outline_PS.hlsl">
+      <Filter>Src\Framework\Shader\StandardShader</Filter>
+    </FxCompile>
+    <FxCompile Include="Src\Framework\Shader\StandardShader\KdStandardShader_Outline_VS.hlsl">
+      <Filter>Src\Framework\Shader\StandardShader</Filter>
+    </FxCompile>
+  </ItemGroup>
+</Project>

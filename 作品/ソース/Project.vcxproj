@@ -1,0 +1,359 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{0F06FE08-688B-490A-AB0E-7A85CF6B8649}</ProjectGuid>
+    <RootNamespace>BaseFramework</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+    <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v143</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="$(VCTargetsPath)Microsoft.CPP.UpgradeFromVC71.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.30319.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(SolutionDir)$(Configuration)\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <InlineFunctionExpansion>Default</InlineFunctionExpansion>
+      <AdditionalIncludeDirectories>.\;src;..\Library;..\Library\DirectXTK\Inc;..\Library\DirectXTex\DirectXTex;..\Library\tinygltf;..\Library\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebug</RuntimeLibrary>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>Pch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+      <ForcedIncludeFiles>Pch.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <AdditionalOptions>/nodefaultlib:"LIBCMT"
+
+ %(AdditionalOptions)</AdditionalOptions>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <IgnoreSpecificDefaultLibraries>%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+      <SubSystem>Windows</SubSystem>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImageHasSafeExceptionHandlers>false</ImageHasSafeExceptionHandlers>
+      <AdditionalLibraryDirectories>..\Library\DirectXTK\Lib\$(Configuration);..\Library\DirectXTex\DirectXTex\Lib\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <FxCompile>
+      <ShaderType>
+      </ShaderType>
+    </FxCompile>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+      <ObjectFileOutput>
+      </ObjectFileOutput>
+      <HeaderFileOutput>%(RelativeDir)\%(Filename).inc</HeaderFileOutput>
+      <VariableName>compiledBuffer</VariableName>
+      <EnableDebuggingInformation>true</EnableDebuggingInformation>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MaxSpeed</Optimization>
+      <InlineFunctionExpansion>AnySuitable</InlineFunctionExpansion>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <FavorSizeOrSpeed>Speed</FavorSizeOrSpeed>
+      <OmitFramePointers>true</OmitFramePointers>
+      <AdditionalIncludeDirectories>.\;src;..\Library;..\Library\DirectXTK\Inc;..\Library\DirectXTex\DirectXTex;..\Library\tinygltf;..\Library\imgui;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <StringPooling>true</StringPooling>
+      <RuntimeLibrary>MultiThreaded</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <RuntimeTypeInfo>true</RuntimeTypeInfo>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <PrecompiledHeaderFile>Pch.h</PrecompiledHeaderFile>
+      <WarningLevel>Level3</WarningLevel>
+      <ForcedIncludeFiles>Pch.h;%(ForcedIncludeFiles)</ForcedIncludeFiles>
+      <MultiProcessorCompilation>true</MultiProcessorCompilation>
+      <LanguageStandard>stdcpp17</LanguageStandard>
+    </ClCompile>
+    <Link>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <RandomizedBaseAddress>false</RandomizedBaseAddress>
+      <DataExecutionPrevention>
+      </DataExecutionPrevention>
+      <TargetMachine>MachineX86</TargetMachine>
+      <AdditionalLibraryDirectories>..\Library\DirectXTK\Lib\$(Configuration);..\Library\DirectXTex\DirectXTex\Lib\$(Configuration);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+    </Link>
+    <FxCompile>
+      <ShaderType>
+      </ShaderType>
+    </FxCompile>
+    <FxCompile>
+      <ShaderModel>5.0</ShaderModel>
+      <ObjectFileOutput>
+      </ObjectFileOutput>
+      <HeaderFileOutput>%(RelativeDir)\%(Filename).inc</HeaderFileOutput>
+      <VariableName>compiledBuffer</VariableName>
+    </FxCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="..\Library\imgui\imconfig.h" />
+    <ClInclude Include="..\Library\imgui\imgui.h" />
+    <ClInclude Include="..\Library\imgui\imgui_impl_dx11.h" />
+    <ClInclude Include="..\Library\imgui\imgui_impl_win32.h" />
+    <ClInclude Include="..\Library\imgui\imgui_internal.h" />
+    <ClInclude Include="..\Library\imgui\imgui_stdlib.h" />
+    <ClInclude Include="..\Library\imgui\imstb_rectpack.h" />
+    <ClInclude Include="..\Library\imgui\imstb_textedit.h" />
+    <ClInclude Include="..\Library\imgui\imstb_truetype.h" />
+    <ClInclude Include="..\Library\imgui\ja_glyph_ranges.h" />
+    <ClInclude Include="..\Library\strconv.h" />
+    <ClInclude Include="..\Library\tinygltf\json.hpp" />
+    <ClInclude Include="..\Library\tinygltf\stb_image.h" />
+    <ClInclude Include="..\Library\tinygltf\stb_image_write.h" />
+    <ClInclude Include="..\Library\tinygltf\tiny_gltf.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\CameraObject\CameraBase.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\CameraObject\TPSCamera.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\EffectObject\AttackEffect\AttackEffect.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\EffectObject\CounterEffect\CounterEffect.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\EffectObject\EffectBase\EffectBase.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\EffectObject\Particle\ParticleBase\ParticleBase.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\EffectObject\Particle\ParticleEffect\ParticleEffect.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\EffectObject\Particle\ParticleFire\ParticleFire.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\EffectObject\SlashingEffect\SlashingEffect.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\EffectObject\SmokeEffect\SmokeEffect.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\EffectObject\SwordEffect\SwordEffect.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\EffectObject\ThunderEffect\ThunderEffect.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\EffectObject\UltEffect\UltEffect.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\EffectObject\UltEffect\UltParticle\UltParticle.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\EventObject\KdSceneChangeForClick.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Bullet\BulletBase.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Bullet\nomalBullet\nomalBullet.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Character\CharacterBase.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Character\Enemy\EnemyBase.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Character\Enemy\normalEnemy\normalEnemy.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Character\Player\CounterState\CounterState.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Character\Player\Player.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Attack\PlayerAttack.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Avoidance\PlayerAvoidance.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Damage\PlayerDamage.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\JustAttack\PlayerJustAttack.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\JustAvoidance\PlayerJustAvoidance.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Move\PlayerMove.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\StateBase\StateBase.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Ult\PlayerUlt.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\KdModelObject.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\PlayerWeapon\PlayerWeaponBase.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\PlayerWeapon\Sword\Sword.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\ModelObject\Stage\Stage1\Stage1.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\ResultObject\Result.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\StageSelectObject\StageSelect.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\TitleObject\Title.h" />
+    <ClInclude Include="Src\Application\Game\GameObject\UIObject\KdUIObject.h" />
+    <ClInclude Include="Src\Application\Game\KdGameSystem.h" />
+    <ClInclude Include="Src\Application\main.h" />
+    <ClInclude Include="Src\Framework\Direct3D\KdMaterial.h" />
+    <ClInclude Include="Src\Framework\Direct3D\KdPolygon.h" />
+    <ClInclude Include="Src\Framework\KdFramework.h" />
+    <ClInclude Include="Src\Framework\Audio\KdAudio.h" />
+    <ClInclude Include="Src\Framework\Direct3D\KdCamera.h" />
+    <ClInclude Include="src\Framework\Direct3D\KdDirect3D.h" />
+    <ClInclude Include="Src\Framework\Direct3D\KdGLTFLoader.h" />
+    <ClInclude Include="src\Framework\Direct3D\KdBuffer.h" />
+    <ClInclude Include="src\Framework\Direct3D\KdMesh.h" />
+    <ClInclude Include="Src\Framework\Direct3D\KdModel.h" />
+    <ClInclude Include="Src\Framework\Direct3D\KdSquarePolygon.h" />
+    <ClInclude Include="src\Framework\Direct3D\KdTexture.h" />
+    <ClInclude Include="Src\Framework\Shader\EffectShader\KdEffectShader.h" />
+    <ClInclude Include="Src\Framework\Shader\StandardShader\KdStandardShader.h" />
+    <ClInclude Include="src\Pch.h" />
+    <ClInclude Include="Src\Framework\Direct3D\KdTrailPolygon.h" />
+    <ClInclude Include="Src\Framework\Math\KdAnimation.h" />
+    <ClInclude Include="Src\Framework\Math\KdCollision.h" />
+    <ClInclude Include="Src\Framework\Shader\KdShaderManager.h" />
+    <ClInclude Include="Src\Framework\Shader\SpriteShader\KdSpriteShader.h" />
+    <ClInclude Include="src\Framework\Utility\KdUtility.h" />
+    <ClInclude Include="src\Framework\Window\KdWindow.h" />
+    <ClInclude Include="Src\System\Easing.h" />
+    <ClInclude Include="Src\System\GameObject\KdGameObject.h" />
+    <ClInclude Include="Src\System\Manager\KdAssetManager\KdAssetEffect\KdAssetEffect.h" />
+    <ClInclude Include="Src\System\Manager\KdAssetManager\KdAssetManager.h" />
+    <ClInclude Include="Src\System\Manager\KdAssetManager\KdAssetModel\KdAssetModel.h" />
+    <ClInclude Include="Src\System\Manager\KdAssetManager\KdAssetUI\KdAssetUI.h" />
+    <ClInclude Include="Src\System\Manager\KdAudioManager\KdGameAudioManager.h" />
+    <ClInclude Include="Src\System\Manager\KdDebugManager\KdDebugManager.h" />
+    <ClInclude Include="Src\System\Manager\KdInputManager\KdInputManager.h" />
+    <ClInclude Include="Src\System\Manager\KdThrowManager\KdThrowManager.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\Library\imgui\imgui.cpp" />
+    <ClCompile Include="..\Library\imgui\imgui_demo.cpp" />
+    <ClCompile Include="..\Library\imgui\imgui_draw.cpp" />
+    <ClCompile Include="..\Library\imgui\imgui_impl_dx11.cpp" />
+    <ClCompile Include="..\Library\imgui\imgui_impl_win32.cpp" />
+    <ClCompile Include="..\Library\imgui\imgui_stdlib.cpp" />
+    <ClCompile Include="..\Library\imgui\imgui_tables.cpp" />
+    <ClCompile Include="..\Library\imgui\imgui_widgets.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\CameraObject\CameraBase.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\CameraObject\TPSCamera.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\EffectObject\AttackEffect\AttackEffect.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\EffectObject\CounterEffect\CounterEffect.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\EffectObject\EffectBase\EffectBase.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\EffectObject\Particle\ParticleBase\ParticleBase.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\EffectObject\Particle\ParticleEffect\ParticleEffect.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\EffectObject\Particle\ParticleFire\ParticleFire.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\EffectObject\SlashingEffect\SlashingEffect.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\EffectObject\SmokeEffect\SmokeEffect.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\EffectObject\SwordEffect\SwordEffect.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\EffectObject\ThunderEffect\ThunderEffect.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\EffectObject\UltEffect\UltEffect.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\EffectObject\UltEffect\UltParticle\UltParticle.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\EventObject\KdSceneChangeForClick.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Bullet\BulletBase.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Bullet\nomalBullet\nomalBullet.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Character\CharacterBase.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Character\Enemy\EnemyBase.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Character\Enemy\normalEnemy\normalEnemy.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Character\Player\CounterState\CounterState.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Character\Player\Player.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Attack\PlayerAttack.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Avoidance\PlayerAvoidance.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Damage\PlayerDamage.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\JustAttack\PlayerJustAttack.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\JustAvoidance\PlayerJustAvoidance.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Move\PlayerMove.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\StateBase\StateBase.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Character\Player\PlayerState\Ult\PlayerUlt.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\KdModelObject.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\PlayerWeapon\PlayerWeaponBase.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\PlayerWeapon\Sword\Sword.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\ModelObject\Stage\Stage1\Stage1.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\ResultObject\Result.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\StageSelectObject\StageSelect.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\TitleObject\Title.cpp" />
+    <ClCompile Include="Src\Application\Game\GameObject\UIObject\KdUIObject.cpp" />
+    <ClCompile Include="Src\Application\Game\KdGameSystem.cpp" />
+    <ClCompile Include="Src\Application\main.cpp" />
+    <ClCompile Include="Src\Framework\Audio\KdAudio.cpp" />
+    <ClCompile Include="Src\Framework\Direct3D\KdCamera.cpp" />
+    <ClCompile Include="src\Framework\Direct3D\KdDirect3D.cpp" />
+    <ClCompile Include="Src\Framework\Direct3D\KdGLTFLoader.cpp" />
+    <ClCompile Include="src\Framework\Direct3D\KdBuffer.cpp" />
+    <ClCompile Include="Src\Framework\Direct3D\KdMaterial.cpp" />
+    <ClCompile Include="src\Framework\Direct3D\KdMesh.cpp" />
+    <ClCompile Include="Src\Framework\Direct3D\KdModel.cpp" />
+    <ClCompile Include="Src\Framework\Direct3D\KdPolygon.cpp" />
+    <ClCompile Include="Src\Framework\Direct3D\KdSquarePolygon.cpp" />
+    <ClCompile Include="src\Framework\Direct3D\KdTexture.cpp" />
+    <ClCompile Include="Src\Framework\Shader\EffectShader\KdEffectShader.cpp" />
+    <ClCompile Include="Src\Framework\Shader\StandardShader\KdStandardShader.cpp" />
+    <ClCompile Include="src\Pch.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="Src\Framework\Direct3D\KdTrailPolygon.cpp" />
+    <ClCompile Include="Src\Framework\Math\KdAnimation.cpp" />
+    <ClCompile Include="Src\Framework\Math\KdCollision.cpp" />
+    <ClCompile Include="Src\Framework\Shader\KdShaderManager.cpp" />
+    <ClCompile Include="Src\Framework\Shader\SpriteShader\KdSpriteShader.cpp" />
+    <ClCompile Include="Src\Framework\Utility\KdUtility.cpp" />
+    <ClCompile Include="src\Framework\Window\KdWindow.cpp" />
+    <ClCompile Include="Src\System\Manager\KdAssetManager\KdAssetEffect\KdAssetEffect.cpp" />
+    <ClCompile Include="Src\System\Manager\KdAssetManager\KdAssetManager.cpp" />
+    <ClCompile Include="Src\System\Manager\KdAssetManager\KdAssetModel\KdAssetModel.cpp" />
+    <ClCompile Include="Src\System\Manager\KdAssetManager\KdAssetUI\KdAssetUI.cpp" />
+    <ClCompile Include="Src\System\Manager\KdAudioManager\KdGameAudioManager.cpp" />
+    <ClCompile Include="Src\System\Manager\KdDebugManager\KdDebugManager.cpp" />
+    <ClCompile Include="Src\System\Manager\KdInputManager\KdInputManager.cpp" />
+    <ClCompile Include="Src\System\Manager\KdThrowManager\KdThrowManager.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Src\Framework\Shader\EffectShader\inc_KdEffectShader.hlsli" />
+    <None Include="Src\Framework\Shader\inc_KdCommon.hlsli" />
+    <None Include="Src\Framework\Shader\SpriteShader\inc_KdSpriteShader.hlsli" />
+    <None Include="Src\Framework\Shader\StandardShader\inc_KdStandardShader.hlsli" />
+  </ItemGroup>
+  <ItemGroup>
+    <FxCompile Include="Src\Framework\Shader\EffectShader\KdEffectShader_PS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Src\Framework\Shader\EffectShader\KdEffectShader_VS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Src\Framework\Shader\SpriteShader\KdSpriteShader_PS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Src\Framework\Shader\SpriteShader\KdSpriteShader_VS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Src\Framework\Shader\StandardShader\KdStandardShader_Outline_PS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Src\Framework\Shader\StandardShader\KdStandardShader_Outline_VS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Src\Framework\Shader\StandardShader\KdStandardShader_PS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Pixel</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Pixel</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Src\Framework\Shader\StandardShader\KdStandardShader_VS.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+    </FxCompile>
+    <FxCompile Include="Src\Framework\Shader\StandardShader\KdStandardShader_VS_Skin.hlsl">
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Vertex</ShaderType>
+      <ShaderType Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Vertex</ShaderType>
+    </FxCompile>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
